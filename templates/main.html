@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+   <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtragem de dados - Estoque</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap"
+      rel="stylesheet"/>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script>
+        window.jQuery || document.write('<script src="{{   url_for('static', filename='jquery.js') }}">\x3C/script>')
+    </script>
+    <script type="text/javascript">
+        // <![CDATA[
+            function loading(){
+
+               if ($("#AU").val() && $("#file").val()) {
+                   $("#loading").show();
+                   $("#content").hide();
+               }
+            }
+        // ]]>
+    </script>
+
+</head>
+<body>
+
+    <header>
+        <h4>Bem vindo(a)! 👋</h4>
+        <h1>Filtragem e organização do Estocão</h1>
+        <div id="loading"></div>
+        <div id="content">
+            <form action="http://localhost:5000/" method="POST"
+             enctype = "multipart/form-data">
+                <h4>Adicione uma data:</h4>
+                <input id="AU" type="date" name="AU" required/>
+                <h4>Adicione a planilha.</h4>
+                <input id="file" type="file" name = "file" required />
+                <p></p>
+                <input type="submit" onclick="loading()"/>
+            </form>
+        </div>
+        <img src="{{ url_for('static',filename='sources/logo.png') }}" alt="logotipoCBC"/>
+
+    </header>
+
+</body>
+
+</html>

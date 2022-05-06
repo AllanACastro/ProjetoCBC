@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  font-size: 62.5%; /* 10px padrão*/
+  --primary-color: hsl(170, 100%, 26%);
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+}
+
+img {
+width: 1rem
+height: 1rem
+}
+
+body {
+  font-family: 'DM Sans';
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+header {
+  width: 37.5rem;
+  margin-top: 4.1rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+h4 {
+  font-size: 1.5rem;
+  margin: top
+}
+h1 {
+  font-size: 2.4rem;
+  line-height: 130%;
+  color: var(--headline);
+  margin-bottom: 2.4rem;
+}
+
+form:not(.no-style) {
+  line-height: 3.2rem;
+  background-color: #D75413;
+  border: none;
+  border-radius: 4rem;
+  margin-bottom: 6rem;
+  height: 16.2rem;
+  width: 36.3rem;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  align-items: center;
+  gap: 1.6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+button {
+  line-height: 3.2rem;
+  background-color: #D75413;
+  border: none;
+  border-radius: 4rem;
+  margin-bottom: 6rem;
+  height: 6.2rem;
+  width: 16.3rem;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  align-items: center;
+  gap: 1.6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#loading {
+    margin: auto;
+    width: 256px;
+    height: 256px;
+    display: none;
+    background: url(/static/sources/loading.gif) no-repeat;
+    cursor: wait;
+}
